@@ -4,6 +4,7 @@ import PageNotFound from "./pages/PageNotFound";
 import Pricing from "./pages/Pricing";
 import Products from "./pages/Products";
 import AppLayout from "./pages/AppLayout";
+import Login from "./pages/Login";
 function App() {
   return (
     <BrowserRouter>
