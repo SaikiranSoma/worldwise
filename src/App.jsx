@@ -15,6 +15,8 @@ function App() {
         <Route path="app" element={<AppLayout />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="login" element={<Login />} />
+        <Route path="logo" element={<Login />} />
+        <Route path="homepage" element={<HomePAge />} />
 
       </Routes>
     </BrowserRouter>
