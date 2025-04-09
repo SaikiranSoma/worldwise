@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route ,Navigate} from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import HomePAge from "./pages/HomePAge";
@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
 import City from "./components/City";
+import Form from "./components/Form"
 const url = "http://localhost:5000/cities";
 function App() {
   const [_cities, setCities] = useState({});
@@ -41,12 +42,12 @@ function App() {
         <Route path="login" element={<Login />} />
 
         <Route path="app" element={<AppLayout />}>
-          <Route index element={<CityList  _cities={_cities}  _loading={_loading} />} />
+          <Route index element={<Navigate replace to="cities"/>} />
 
           <Route path="cities" element={<CityList _cities={_cities}  _loading={_loading}/>} />
           <Route path='cities/:id' element={<City/>} />
           <Route path="countries" element={<CountryList  _cities={_cities}  _loading={_loading} />} />
-          <Route path="form" element={<p>Form</p>} />
+          <Route path="form" element={<Form/>} />
         </Route>
       </Routes>
     </BrowserRouter>
