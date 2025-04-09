@@ -9,6 +9,7 @@ import AppLayout from "./pages/AppLayout";
 import Login from "./pages/Login";
 import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
+import City from "./components/City";
 const url = "http://localhost:5000/cities";
 function App() {
   const [_cities, setCities] = useState({});
@@ -41,7 +42,9 @@ function App() {
 
         <Route path="app" element={<AppLayout />}>
           <Route index element={<CityList  _cities={_cities}  _loading={_loading} />} />
+
           <Route path="cities" element={<CityList _cities={_cities}  _loading={_loading}/>} />
+          <Route path='cities/:id' element={<City/>} />
           <Route path="countries" element={<CountryList  _cities={_cities}  _loading={_loading} />} />
           <Route path="form" element={<p>Form</p>} />
         </Route>
