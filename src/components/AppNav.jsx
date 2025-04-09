@@ -13,8 +13,8 @@ function AppNav() {
                     <NavLink to='countries'>Countries</NavLink>
                 </li>
             </ul>
-        </nav>
+        </nav>                              
     )
 }
 
-export default AppNav
+export default AppNav;
